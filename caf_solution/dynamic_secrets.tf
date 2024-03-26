@@ -1,6 +1,5 @@
 module "dynamic_keyvault_secrets" {
-  #source  = "aztfmod/caf/azurerm//modules/security/dynamic_keyvault_secrets"
-  source  = "github.com/darrenhull/terraform-azurerm-caf//modules/security/dynamic_keyvault_secrets"
+  source  = "aztfmod/caf/azurerm//modules/security/dynamic_keyvault_secrets"
   version = "5.7.9"
 
   for_each = {
