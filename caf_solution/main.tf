@@ -19,7 +19,7 @@ terraform {
       version = "~> 3.1.0"
     }
     azurecaf = {
-      source  = "aztfmod/azurecaf"
+      source  = "https://github.com/darrenhull/terraform-azurerm-caf"
       version = "~> 1.2.0"
     }
   }
