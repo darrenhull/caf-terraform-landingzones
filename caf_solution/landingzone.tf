@@ -1,6 +1,7 @@
 module "solution" {
   //source  = "aztfmod/caf/azurerm"
-  source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-container-app-workload-profile-name"
+  source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-1947-container-app-workload-profile"
+  //source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-container-app-workload-profile-name"
            
   #version = "5.7.9"
   
