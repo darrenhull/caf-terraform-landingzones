@@ -158,6 +158,19 @@ variable "deploy_demo_landing_zones" {
   default     = false
 }
 
+variable "deploy_corp_landing_zones" {
+  type        = bool
+  description = "If set to true, module will deploy the \"Online\" Management Group, including \"out of the box\" policies and roles."
+  default     = false
+}
+
+variable "deploy_online_landing_zones" {
+  type        = bool
+  description = "If set to true, will include the corp \"Landing Zone\" Management Groups."
+  default     = false
+}
+
+
 variable "custom_landing_zones" {
   type = map(
     object({
