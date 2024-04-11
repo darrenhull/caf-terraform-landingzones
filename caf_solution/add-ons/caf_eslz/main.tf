@@ -4,8 +4,8 @@ terraform {
     azurerm = {
       source  = "hashicorp/azurerm"
       #version = "~> 3.54.0"
-      # source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-1947-container-app-workload-profile"      
-      version = "5.7.9"
+       source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-1947-container-app-workload-profile"      
+      # version = "5.7.9"
   
     }
   }
