@@ -3,7 +3,10 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 3.54.0"
+      #version = "~> 3.54.0"
+      # source = "github.com/darrenhull/terraform-azurerm-caf?ref=main-1947-container-app-workload-profile"      
+      version = "5.7.9"
+  
     }
   }
   required_version = ">= 1.3.5"
