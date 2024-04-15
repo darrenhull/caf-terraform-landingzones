@@ -33,6 +33,8 @@ module "enterprise_scale" {
   deploy_identity_resources        = var.deploy_identity_resources
   deploy_management_resources      = var.deploy_management_resources
   deploy_corp_landing_zones        = var.deploy_corp_landing_zones
+  deploy_online_landing_zones      = var.deploy_online_landing_zones
+  deploy_sap_landing_zones         = var.deploy_sap_landing_zones
   disable_telemetry                = var.disable_telemetry
   subscription_id_connectivity     = local.subscription_id_connectivity
   subscription_id_management       = local.subscription_id_management

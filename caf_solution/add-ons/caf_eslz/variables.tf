@@ -170,6 +170,12 @@ variable "deploy_online_landing_zones" {
   default     = false
 }
 
+variable "deploy_sap_landing_zones" {
+  type        = bool
+  description = "If set to true, will include the sap \"Landing Zone\" Management Groups."
+  default     = false
+}
+
 
 variable "custom_landing_zones" {
   type = map(
