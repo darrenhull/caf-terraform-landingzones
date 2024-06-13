@@ -13,6 +13,12 @@ variable "eventgrid_event_subscription" {
 variable "eventgrid_topic" {
   default = {}
 }
+variable "eventgrid_namespace" {
+  default = {}
+}
+variable "eventgrid_namespace_topic" {
+  default = {}
+}
 variable "servicebus_namespaces" {
   default = {}
 }
