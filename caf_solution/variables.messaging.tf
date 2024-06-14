@@ -19,6 +19,9 @@ variable "eventgrid_namespaces" {
 variable "eventgrid_namespace_topics" {
   default = {}
 }
+variable "eventgrid_namespace_topic_subscriptions" {
+  default = {}
+}
 variable "servicebus_namespaces" {
   default = {}
 }
