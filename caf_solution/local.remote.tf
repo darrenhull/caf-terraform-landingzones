@@ -3,6 +3,23 @@ locals {
     api_management = {
       for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management, {}))
     }
+                  
+    api_management_api = {
+      for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_api, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_api, {}))
+    }                 
+
+    api_management_api_policy = {
+      for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_api_policy, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_api_policy, {}))
+    }           
+
+    api_management_gateway = {
+      for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_gateway, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_gateway, {}))
+    }             
+
+    api_management_gateway_api = {
+      for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_gateway_api, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].api_management_gateway_api, {}))
+    }         
+              
     azuread_apps = {
       for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].azuread_apps, {}), try(data.terraform_remote_state.remote[key].outputs.objects[key].aad_apps, {}))
     }
@@ -12,9 +29,7 @@ locals {
     azuread_groups = merge(
       tomap({ "launchpad" = try(data.terraform_remote_state.remote[var.landingzone.global_settings_key].outputs.launchpad_identities["launchpad"].azuread_groups, {}) }),
       {
-        for key, value in try(var.landingzone.tfstates, {}) : key => merge(
-          try(data.terraform_remote_state.remote[key].outputs.objects[key].azuread_groups, {})
-        )
+        for key, value in try(var.landingzone.tfstates, {}) : key => merge(try(data.terraform_remote_state.remote[key].outputs.objects[key].azuread_groups, {}))
       }
     )
     azuread_service_principals = {
